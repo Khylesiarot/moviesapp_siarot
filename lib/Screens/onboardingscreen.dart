@@ -92,8 +92,8 @@ class OnboardingScreen extends StatelessWidget {
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(200),
                           child: Container(
-                            height: 270,
-                            width: 270,
+                            height: 320,
+                            width: 320,
                             decoration: const BoxDecoration(
                               color: Colors.transparent,
                               
@@ -123,6 +123,31 @@ class OnboardingScreen extends StatelessWidget {
                     height: screenHeight * 0.09,
                   ),
 
+                     Text(
+                    'Watch movies in\nVirtual Reality',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Constants.kWhiteColor.withOpacity(0.85),
+                      fontSize: screenHeight <= 667 ? 18 : 34,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                  SizedBox(
+                    height: screenHeight * 0.05,
+                  ),
+                  Text(
+                    'Download and watch offline\nwherever you are',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Constants.kWhiteColor.withOpacity(0.75),
+                      fontSize: screenHeight <= 667 ? 12 : 16,
+                    ),
+                  ),
+                  SizedBox(
+                    height: screenHeight * 0.03,
+                  ),
+
+                  
 
               ],
             ))
