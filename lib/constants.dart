@@ -5,6 +5,7 @@ class Constants {
   static const Color blck = Color(0xFF19191B);
   static const Color pnk = Color(0xFFFE53BB);
   static const Color grn = Color(0xFF09FBD3);
+  static const Color kWhiteColor = Color(0xFFFFFFFF);
   
   
 }
