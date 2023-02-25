@@ -43,7 +43,7 @@ class OnboardingScreen extends StatelessWidget {
                   ),
                 )),
             Positioned(
-                top: screenHeight * .4,
+                top: screenHeight * .251,
                 left: screenWidth * .55,
                 child: Container(
                   height: 200,
@@ -54,12 +54,12 @@ class OnboardingScreen extends StatelessWidget {
                   ),
                   child: BackdropFilter(
                     filter: ImageFilter.blur(
-                      sigmaX: 60,
-                      sigmaY: 60,
+                      sigmaX: 80,
+                      sigmaY: 80,
                     ),
                     child: Container(
-                      height: 120,
-                      width: 120,
+                      height: 200,
+                      width: 200,
                       color: Colors.transparent,
                     ),
                   ),
@@ -76,17 +76,17 @@ class OnboardingScreen extends StatelessWidget {
                   child: Align(
                     alignment: Alignment.topCenter,
                     child: RotationTransition(
-                      turns: const AlwaysStoppedAnimation(35 / 360),
+                      turns: const AlwaysStoppedAnimation(40/ 360),
                       child: Container(
                         decoration: BoxDecoration(
                             border: GradientBoxBorder(
                               gradient: LinearGradient(colors: [
                                 Constants.pnk,
-                                Constants.pnk.withOpacity(.0),
+                                Constants.pnk.withOpacity(.07),
                                 Constants.grn.withOpacity(.1),
                                 Constants.grn,
                               ]),
-                              width: 3,
+                              width: 4,
                             ),
                             borderRadius: BorderRadius.circular(200)),
                         child: ClipRRect(
@@ -102,9 +102,9 @@ class OnboardingScreen extends StatelessWidget {
                               fit: BoxFit.cover,
                               child: Padding(
                                 padding: EdgeInsets.only(
-                                  left: 120,
-                                  top: 20,
-                                  bottom: 30,
+                                  left: 60,
+                                  top: 30,
+                                  bottom: 10,
                                 ),
                                 child: RotationTransition(
                                   turns:  AlwaysStoppedAnimation(325 / 360),
@@ -120,7 +120,7 @@ class OnboardingScreen extends StatelessWidget {
                 ),
 
                  SizedBox(
-                    height: screenHeight * 0.09,
+                    height: screenHeight * 0.05,
                   ),
 
                      Text(
@@ -128,8 +128,8 @@ class OnboardingScreen extends StatelessWidget {
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: Constants.kWhiteColor.withOpacity(0.85),
-                      fontSize: screenHeight <= 667 ? 18 : 34,
-                      fontWeight: FontWeight.w700,
+                      fontSize: screenHeight <= 667 ? 17 : 34,
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
                   SizedBox(
@@ -186,7 +186,7 @@ class OnboardingScreen extends StatelessWidget {
                     child: Container(
                       alignment: Alignment.center,
                       height: 38,
-                      width: 130,
+                      width: 160,
                       decoration: const BoxDecoration(
                         color: Colors.transparent,
                         
@@ -201,9 +201,34 @@ class OnboardingScreen extends StatelessWidget {
                      
                     ),
                   ),
-                ))
+                )),
 
-
+                   SizedBox(
+                    height: screenHeight * 0.09,
+                  ),
+              
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: List.generate(
+                      3,
+                      (index) {
+                        return Container(
+                          height: 7,
+                          width: 7,
+                          margin: const EdgeInsets.symmetric(horizontal: 4),
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: index == 0
+                                ? Constants.grn
+                                : Constants.kWhiteColor.withOpacity(0.2),
+                          ),
+                        );
+                      },
+                    ),
+                  ),
+                  SizedBox(
+                    height: screenHeight * 0.05,
+                  )
               ],
             ))
           ],
