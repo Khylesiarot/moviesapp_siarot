@@ -73,7 +73,7 @@ class _GradientPainter extends CustomPainter {
 
     // create difference between outer and inner paths and draw it
     Path path1 = Path()..addRRect(outerRRect);
-    Path path2 = Path()..addRRect(outerRRect);
+    Path path2 = Path()..addRRect(innerRRect);
     var path = Path.combine(PathOperation.difference, path1, path2);
     canvas.drawPath(path, _paint);
   }

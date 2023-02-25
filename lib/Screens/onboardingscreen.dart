@@ -147,7 +147,62 @@ class OnboardingScreen extends StatelessWidget {
                     height: screenHeight * 0.03,
                   ),
 
-                  
+                 
+
+              Container(
+               decoration: BoxDecoration(
+                boxShadow: [
+                  BoxShadow(
+                    offset: const Offset(-30, 0),
+                    color: Constants.pnk.withOpacity(.5),
+                    blurRadius: 30,
+                    spreadRadius: -30,
+                  ),
+                   BoxShadow(
+                    offset: const Offset(30, 0),
+                    color: Constants.grn.withOpacity(.5),
+                    blurRadius: 30,
+                    spreadRadius: -30,
+                  ),
+
+                ]
+               ), 
+                child: Container(
+                  decoration: BoxDecoration(
+                      // ignore: prefer_const_constructors
+                      border: GradientBoxBorder(
+                        gradient: const LinearGradient(
+                          begin: Alignment.topCenter,
+                          end: Alignment.bottomRight,
+                          colors: [
+                          Constants.pnk,
+                          Constants.grn,
+                        ]),
+                        width: 3,
+                      ),
+                      borderRadius: BorderRadius.circular(200)),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(200),
+                    child: Container(
+                      alignment: Alignment.center,
+                      height: 38,
+                      width: 130,
+                      decoration: const BoxDecoration(
+                        color: Colors.transparent,
+                        
+                      ),
+                      child: const Text(
+                        'Sign up',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Colors.white
+                        ),
+                      ),
+                     
+                    ),
+                  ),
+                ))
+
 
               ],
             ))
