@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_svg/svg.dart';
+import 'package:gradient_borders/gradient_borders.dart';
 import 'package:moviesapp_siarot/templates/moviecast.dart';
 import 'package:moviesapp_siarot/templates/moviedetails.dart';
 
@@ -129,6 +130,38 @@ class _MovieDetailScreenState extends State<MovieDetailScreen> {
                 ),
               ),
             ),
+                   Positioned(
+              right: 9,
+              top: screenHeight * 0.42,
+              child: Container(
+                width: 60,
+                height: 60,
+                padding: const EdgeInsets.all(3),
+                decoration:  BoxDecoration(
+                  color: Constants.gry.withOpacity(.7),
+                  shape: BoxShape.circle,
+                  border: const GradientBoxBorder(
+                    gradient: LinearGradient(
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                    colors: [
+                      Color(0xffFE53BB),
+                      Color(0xFF09FBD3),
+                    ],
+                  ),
+                  width: 3,
+                  )
+                  
+                ),
+                
+                  child: const Icon(
+                    Icons.play_arrow,
+                    color: Constants.wht,
+                    size: 30,
+                  ),
+                
+              ),
+            ),
             SafeArea(
                 child: Align(
               alignment: Alignment.center,
@@ -152,7 +185,8 @@ class _MovieDetailScreenState extends State<MovieDetailScreen> {
                   MovieCast(
                       screenHeight: screenHeight,
                       screenWidth: screenWidth,
-                      movieCast: widget.movieCast)
+                      movieCast: widget.movieCast),
+                
                 ],
               ),
             ))
