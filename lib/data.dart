@@ -29,7 +29,7 @@ var newMovies = [
     movieRating: '4.7',
     movieSinopsis:
         'With Spider-Man\'s identity now revealed, Peter asks Doctor Strange for help. When a spell goes wrong, dangerous foes from other worlds start to appear, forcing Peter to discover what it truly means to be Spider-Man.',
-    movieCast: ['Tom Holland', 'Zendaya', 'Benedict Cumberbatch'],
+     movieCast: ['Angelina Jolie','Gemma Chan','Salma Hayek' ,'Richard Madden'],
   ),
   Movie(
     movieName: 'The Matrix Resurrections',
@@ -40,7 +40,7 @@ var newMovies = [
     movieRating: '3.5',
     movieSinopsis:
         'Return to a world of two realities: one, everyday life; the other, what lies behind it. To find out if his reality is a construct, to truly know himself, Mr. Anderson will have to choose to follow the white rabbit once more.',
-    movieCast: ['Keanu Reeves', 'Carrie-Anne Moss', 'Yahya Abdul-Mateen II'],
+     movieCast: ['Angelina Jolie','Gemma Chan','Salma Hayek' ,'Richard Madden'],
   ),
   Movie(
     movieName: 'Eternals',
@@ -51,7 +51,7 @@ var newMovies = [
     movieRating: '4.2',
     movieSinopsis:
         'The saga of the Eternals, a race of immortal beings who lived on Earth and shaped its history and civilizations.',
-    movieCast: ['Gemma Chan', 'Richard Madden', 'Angelina Jolie'],
+    movieCast: ['Angelina Jolie','Gemma Chan','Salma Hayek' ,'Richard Madden'],
   ),
 ];
 
@@ -65,7 +65,7 @@ var upcomingMovies = [
     movieRating: '4.3',
     movieSinopsis:
         'Arthur Curry, the human-born heir to the underwater kingdom of Atlantis, goes on a quest to prevent a war between the worlds of ocean and land.',
-    movieCast: ['Jason Momoa', 'Amber Heard', 'Willem Dafoe'],
+     movieCast: ['Angelina Jolie','Gemma Chan','Salma Hayek' ,'Richard Madden'],
   ),
   Movie(
     movieName: 'Batman',
@@ -76,7 +76,7 @@ var upcomingMovies = [
     movieRating: '4.7',
     movieSinopsis:
         'When the Riddler, a sadistic serial killer, begins murdering key political figures in Gotham, Batman is forced to investigate the city\'s hidden corruption and question his family\'s involvement.',
-    movieCast: ['Robert Pattinson', 'Zoë Kravitz', 'Jeffrey Wright'],
+     movieCast: ['Angelina Jolie','Gemma Chan','Salma Hayek' ,'Richard Madden'],
   ),
   Movie(
     movieName: 'Sonic the Hedgehog 2',
@@ -87,6 +87,6 @@ var upcomingMovies = [
     movieRating: '4.5',
     movieSinopsis:
         'When the manic Dr Robotnik returns to Earth with a new ally, Knuckles the Echidna, Sonic and his new friend Tails is all that stands in their way.',
-    movieCast: ['Ben Schwartz', 'Idris Elba', 'Colleen O\'Shaughnessey'],
+     movieCast: ['Angelina Jolie','Gemma Chan','Salma Hayek' ,'Richard Madden'],
   ),
 ];
