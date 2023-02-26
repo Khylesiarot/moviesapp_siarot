@@ -174,6 +174,53 @@ const SizedBox(
                       },
                     ),
                   ),
+                   const SizedBox(
+                    height: 38,
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.only(left: 20.0),
+                    child: Text(
+                      'Upcoming movies',
+                      style: TextStyle(
+                        color: Constants.wht,
+                        fontSize: 17,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 37,
+                  ),
+                  SizedBox(
+                    height: 160,
+                    child: ListView.builder(
+                      shrinkWrap: true,
+                      scrollDirection: Axis.horizontal,
+                      itemCount: upcomingMovies.length,
+                      itemBuilder: (context, index) {
+                        String mask;
+                        if (index == 0) {
+                          mask = Constants.firstCard;
+                        } else if (index == upcomingMovies.length - 1) {
+                          mask = Constants.lastCard;
+                        } else {
+                          mask = Constants.centerCard;
+                        }
+                        return GestureDetector(
+                          child: Container(
+                            margin: EdgeInsets.only(
+                              left: index == 0 ? 20 : 0,
+                            ),
+                            height: 160,
+                            width: 142,
+                            child: MovieCard(
+                              asset: upcomingMovies[index].moviePoster,
+                              mask: mask,
+                            ),
+                          ),
+                        );
+                      },
+                    ),
+                  ),
 
 
 

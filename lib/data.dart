@@ -22,7 +22,7 @@ class Movie {
 var newMovies = [
   Movie(
     movieName: 'Spider-Man: No Way Home',
-    moviePoster: 'assets/posters/img-spiderman.jpg',
+    moviePoster: 'assets/posters/image 91.png',
     movieReleaseYear: '2021',
     movieCategory: 'Action-Adventure-Fantasy',
     movieDuration: '2h 28m',
@@ -33,7 +33,7 @@ var newMovies = [
   ),
   Movie(
     movieName: 'The Matrix Resurrections',
-    moviePoster: 'assets/posters/img-matrix.jpg',
+    moviePoster: 'assets/posters/image 92.png',
     movieReleaseYear: '2021',
     movieCategory: 'Action-Sci-Fi',
     movieDuration: '2h 28m',
@@ -44,7 +44,7 @@ var newMovies = [
   ),
   Movie(
     movieName: 'Eternals',
-    moviePoster: 'assets/posters/img-eternals.jpg',
+    moviePoster: 'assets/posters/image 90.png',
     movieReleaseYear: '2021',
     movieCategory: 'Action-Adventure-Fantasy',
     movieDuration: '2h 36m',
@@ -58,7 +58,7 @@ var newMovies = [
 var upcomingMovies = [
   Movie(
     movieName: 'Aquaman',
-    moviePoster: 'assets/posters/img-aquaman.jpg',
+    moviePoster: 'assets/posters/image 93.png',
     movieReleaseYear: '2018',
     movieCategory: 'Action-Adventure-Fantasy',
     movieDuration: '2h 23m',
@@ -69,7 +69,7 @@ var upcomingMovies = [
   ),
   Movie(
     movieName: 'Batman',
-    moviePoster: 'assets/posters/img-batman.jpg',
+    moviePoster: 'assets/posters/image 84.png',
     movieReleaseYear: '2022',
     movieCategory: 'Action-Crime-Drama',
     movieDuration: '2h 56m',
@@ -80,7 +80,7 @@ var upcomingMovies = [
   ),
   Movie(
     movieName: 'Sonic the Hedgehog 2',
-    moviePoster: 'assets/posters/img-sonic.jpg',
+    moviePoster: 'assets/posters/image 94.png',
     movieReleaseYear: '2022',
     movieCategory: 'Animation-Action-Adventure',
     movieDuration: '2h 2m',
