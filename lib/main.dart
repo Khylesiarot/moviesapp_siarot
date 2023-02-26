@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+
 import 'package:moviesapp_siarot/Screens/onboardingscreen.dart';
 
 
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         fontFamily: GoogleFonts.openSans().fontFamily,
       ),
-      home: const OnboardingScreen(),
+      home:  const OnboardingScreen(),
     );
   }
 }

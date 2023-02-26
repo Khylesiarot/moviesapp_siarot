@@ -1,8 +1,13 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:moviesapp_siarot/components/bottomnavbar.dart';
+import 'package:moviesapp_siarot/components/floatingButton.dart';
+import 'package:moviesapp_siarot/components/searchbar.dart';
+import 'package:moviesapp_siarot/templates/moviecard.dart';
 
 import '../constants.dart';
+import '../data.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -16,6 +21,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     final screenHeight = MediaQuery.of(context).size.height;
     final screenWidth = MediaQuery.of(context).size.width;
+    final List<Movie> movies = [];
 
     return Scaffold(
       backgroundColor: Constants.blck,
@@ -56,7 +62,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 width: 120,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: Constants.pnk.withOpacity(0.5),
+                  color: Constants.pnk.withOpacity(0.8),
                 ),
                 child: BackdropFilter(
                   filter: ImageFilter.blur(
@@ -79,7 +85,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 width: 100,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: Constants.grn.withOpacity(0.5),
+                  color: Constants.cyn.withOpacity(0.8),
                 ),
                 child: BackdropFilter(
                   filter: ImageFilter.blur(
@@ -94,9 +100,148 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
             ),
+
+            SafeArea(
+              bottom: false,
+            child: ListView(
+              primary: true,
+              children:  [
+                const SizedBox(
+                    height: 24,
+                  ),
+                  const Text(
+                    'What would you\nlike to watch?',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 28,
+                      color: Constants.wht,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 30,
+                  ),
+                  const SearchFieldWidget(
+                    padding: EdgeInsets.symmetric(
+                      horizontal: 20,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 39,
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.only(left: 20.0),
+                    child: Text(
+                      'New movies',
+                      style: TextStyle(
+                        color: Constants.wht,
+                        fontSize: 17,
+                      ),
+                    ),
+                  
+                ),
+                
+const SizedBox(
+                    height: 37,
+                  ),
+                
+                  SizedBox(
+                    height: 160,
+                    child: ListView.builder(
+                      shrinkWrap: true,
+                      scrollDirection: Axis.horizontal,
+                      itemCount: newMovies.length,
+                      itemBuilder: (context, index) {
+                        String mask;
+                        if (index == 0) {
+                          mask = Constants.firstCard;
+                        } else if (index == newMovies.length - 1) {
+                          mask = Constants.lastCard;
+                        } else {
+                          mask = Constants.centerCard;
+                        }
+                        return GestureDetector(
+                          child: Container(
+                            margin: EdgeInsets.only(
+                              left: index == 0 ? 20 : 0,
+                            ),
+                            height: 160,
+                            width: 142,
+                            child: MovieCard(
+                              asset: newMovies[index].moviePoster,
+                              mask: mask,
+                            ),
+                          ),
+                        );
+                      },
+                    ),
+                  ),
+                   const SizedBox(
+                    height: 38,
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.only(left: 20.0),
+                    child: Text(
+                      'Upcoming movies',
+                      style: TextStyle(
+                        color: Constants.wht,
+                        fontSize: 17,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 37,
+                  ),
+                  SizedBox(
+                    height: 160,
+                    child: ListView.builder(
+                      shrinkWrap: true,
+                      scrollDirection: Axis.horizontal,
+                      itemCount: upcomingMovies.length,
+                      itemBuilder: (context, index) {
+                        String mask;
+                        if (index == 0) {
+                          mask = Constants.firstCard;
+                        } else if (index == upcomingMovies.length - 1) {
+                          mask = Constants.lastCard;
+                        } else {
+                          mask = Constants.centerCard;
+                        }
+                        return GestureDetector(
+                          child: Container(
+                            margin: EdgeInsets.only(
+                              left: index == 0 ? 20 : 0,
+                            ),
+                            height: 160,
+                            width: 142,
+                            child: MovieCard(
+                              asset: upcomingMovies[index].moviePoster,
+                              mask: mask,
+                            ),
+                          ),
+                        );
+                      },
+                    ),
+                  ),
+
+
+
+              ],
+            )
+            ) 
+            
+
+
             ],
           ),
         ),
+
+
+
+        floatingActionButton: const CenterButton(),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      
+      bottomNavigationBar: const BottomNavBar()
     );
   }
 }
