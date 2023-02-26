@@ -1,6 +1,8 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:moviesapp_siarot/components/bottomnavbar.dart';
+import 'package:moviesapp_siarot/components/floatingButton.dart';
 import 'package:moviesapp_siarot/components/searchbar.dart';
 import 'package:moviesapp_siarot/templates/moviecard.dart';
 
@@ -60,7 +62,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 width: 120,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: Constants.pnk.withOpacity(0.5),
+                  color: Constants.pnk.withOpacity(0.8),
                 ),
                 child: BackdropFilter(
                   filter: ImageFilter.blur(
@@ -83,7 +85,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 width: 100,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: Constants.grn.withOpacity(0.5),
+                  color: Constants.cyn.withOpacity(0.8),
                 ),
                 child: BackdropFilter(
                   filter: ImageFilter.blur(
@@ -233,6 +235,13 @@ const SizedBox(
             ],
           ),
         ),
+
+
+
+        floatingActionButton: const CenterButton(),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      
+      bottomNavigationBar: const BottomNavBar()
     );
   }
 }
