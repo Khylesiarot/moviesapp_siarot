@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+
+import '../constants.dart';
 
 
 
@@ -69,6 +72,48 @@ class MovieDetailScreen extends StatelessWidget {
                 ),
               ),
             ),
+             Positioned(
+              top: screenHeight * 0.05,
+              left: 0,
+              right: 0,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 21.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    GestureDetector(
+                      onTap: (){Navigator.pop(context);},
+                      child: Container(
+                        
+                        height: 44,
+                        width: 44,
+                        padding: const EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                          color: Constants.blck.withOpacity(.05),
+                          borderRadius: BorderRadius.circular(100),
+                          border: Border.all(width: 3, color: Constants.wht),
+                        ),
+                        child: SvgPicture.asset(
+                          'assets/svg/icon-back.svg',
+                        ),
+                      ),
+                    ),
+                    Container(
+                      height: 44,
+                      width: 44,
+                      padding: const EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                        color: Constants.blck.withOpacity(.05),
+                        borderRadius: BorderRadius.circular(100),
+                        border: Border.all(width: 3, color: Colors.white),
+                      ),
+                      child: SvgPicture.asset('assets/svg/icon-menu.svg'),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            
                       ],
         ),
       ),
