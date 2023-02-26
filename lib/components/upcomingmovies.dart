@@ -29,14 +29,14 @@ class UpcomingMovieCards extends StatelessWidget {
             onTap: (){
               Navigator.of(context).push(MaterialPageRoute(
                   builder: (context) => MovieDetailScreen(
-                        movieName: newMovies[index].movieName,
-                        moviePoster: newMovies[index].moviePoster,
-                        movieReleaseYear: newMovies[index].movieReleaseYear,
-                        movieCategory: newMovies[index].movieCategory,
-                        movieDuration: newMovies[index].movieDuration,
-                        movieRating: newMovies[index].movieRating,
-                        movieSinopsis: newMovies[index].movieSinopsis,
-                        movieCast: newMovies[index].movieCast,
+                        movieName: upcomingMovies[index].movieName,
+                        moviePoster: upcomingMovies[index].moviePoster,
+                        movieReleaseYear: upcomingMovies[index].movieReleaseYear,
+                        movieCategory: upcomingMovies[index].movieCategory,
+                        movieDuration: upcomingMovies[index].movieDuration,
+                        movieRating: upcomingMovies[index].movieRating,
+                        movieSinopsis: upcomingMovies[index].movieSinopsis,
+                        movieCast: upcomingMovies[index].movieCast,
                       )));
             },
             child: Container(
