@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:moviesapp_siarot/components/searchbar.dart';
 
 import '../constants.dart';
 
@@ -94,6 +95,52 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
             ),
+
+            SafeArea(
+              bottom: false,
+            child: ListView(
+              primary: true,
+              children: const [
+                SizedBox(
+                    height: 24,
+                  ),
+                  Text(
+                    'What would you\nlike to watch?',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 28,
+                      color: Constants.wht,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 30,
+                  ),
+                  SearchFieldWidget(
+                    padding: EdgeInsets.symmetric(
+                      horizontal: 20,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 39,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left: 20.0),
+                    child: Text(
+                      'New movies',
+                      style: TextStyle(
+                        color: Constants.wht,
+                        fontSize: 17,
+                      ),
+                    ),
+                  
+                ),
+              ],
+            )
+            ) 
+            
+
+
             ],
           ),
         ),

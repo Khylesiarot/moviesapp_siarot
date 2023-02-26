@@ -130,7 +130,7 @@ class OnboardingScreen extends StatelessWidget {
                     'Watch movies in\nVirtual Reality',
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      color: Constants.kWhiteColor.withOpacity(0.85),
+                      color: Constants.wht.withOpacity(0.85),
                       fontSize: screenHeight <= 667 ? 17 : 34,
                       fontWeight: FontWeight.bold,
                     ),
@@ -142,7 +142,7 @@ class OnboardingScreen extends StatelessWidget {
                     'Download and watch offline\nwherever you are',
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      color: Constants.kWhiteColor.withOpacity(0.75),
+                      color: Constants.wht.withOpacity(0.75),
                       fontSize: screenHeight <= 667 ? 12 : 16,
                     ),
                   ),
@@ -219,7 +219,7 @@ class OnboardingScreen extends StatelessWidget {
                             shape: BoxShape.circle,
                             color: index == 0
                                 ? Constants.grn
-                                : Constants.kWhiteColor.withOpacity(0.2),
+                                : Constants.wht.withOpacity(0.2),
                           ),
                         );
                       },
