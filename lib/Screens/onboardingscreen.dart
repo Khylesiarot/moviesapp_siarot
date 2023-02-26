@@ -1,7 +1,6 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:moviesapp_siarot/Screens/homescreen.dart';
 import 'package:moviesapp_siarot/components/intropic.dart';
 import 'package:moviesapp_siarot/components/signupbutton.dart';
 import 'package:moviesapp_siarot/constants.dart';
@@ -18,8 +17,7 @@ class OnboardingScreen extends StatelessWidget {
       backgroundColor: Constants.blck,
       extendBody: true,
       body: InkWell(
-        onHover: (value) => Navigator.push(context,
-            MaterialPageRoute(builder: (context) => const HomeScreen())),
+        onHover: (value) =>  Navigator.pushNamed(context, "home"),
         child: SizedBox(
           width: screenWidth,
           height: screenHeight,
@@ -106,7 +104,7 @@ class OnboardingScreen extends StatelessWidget {
                   ),
                   const SignUpButton(),
                   SizedBox(
-                    height: screenHeight * 0.09,
+                    height: screenHeight * 0.04,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
