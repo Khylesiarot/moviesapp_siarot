@@ -2,8 +2,10 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:moviesapp_siarot/components/searchbar.dart';
+import 'package:moviesapp_siarot/templates/moviecard.dart';
 
 import '../constants.dart';
+import '../data.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -17,6 +19,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     final screenHeight = MediaQuery.of(context).size.height;
     final screenWidth = MediaQuery.of(context).size.width;
+    final List<Movie> movies = [];
 
     return Scaffold(
       backgroundColor: Constants.blck,
@@ -100,11 +103,11 @@ class _HomeScreenState extends State<HomeScreen> {
               bottom: false,
             child: ListView(
               primary: true,
-              children: const [
-                SizedBox(
+              children:  [
+                const SizedBox(
                     height: 24,
                   ),
-                  Text(
+                  const Text(
                     'What would you\nlike to watch?',
                     textAlign: TextAlign.center,
                     style: TextStyle(
@@ -113,18 +116,18 @@ class _HomeScreenState extends State<HomeScreen> {
                       fontWeight: FontWeight.w700,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 30,
                   ),
-                  SearchFieldWidget(
+                  const SearchFieldWidget(
                     padding: EdgeInsets.symmetric(
                       horizontal: 20,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 39,
                   ),
-                  Padding(
+                  const Padding(
                     padding: EdgeInsets.only(left: 20.0),
                     child: Text(
                       'New movies',
@@ -135,6 +138,45 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   
                 ),
+                
+const SizedBox(
+                    height: 37,
+                  ),
+                
+                  SizedBox(
+                    height: 160,
+                    child: ListView.builder(
+                      shrinkWrap: true,
+                      scrollDirection: Axis.horizontal,
+                      itemCount: newMovies.length,
+                      itemBuilder: (context, index) {
+                        String mask;
+                        if (index == 0) {
+                          mask = Constants.firstCard;
+                        } else if (index == newMovies.length - 1) {
+                          mask = Constants.lastCard;
+                        } else {
+                          mask = Constants.centerCard;
+                        }
+                        return GestureDetector(
+                          child: Container(
+                            margin: EdgeInsets.only(
+                              left: index == 0 ? 20 : 0,
+                            ),
+                            height: 160,
+                            width: 142,
+                            child: MovieCard(
+                              asset: newMovies[index].moviePoster,
+                              mask: mask,
+                            ),
+                          ),
+                        );
+                      },
+                    ),
+                  ),
+
+
+
               ],
             )
             ) 

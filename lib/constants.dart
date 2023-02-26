@@ -24,4 +24,11 @@ class Constants {
   static const String iconBack = 'assets/svg/icon-back.svg';
   static const String iconMenu = 'assets/svg/icon-menu.svg';
 
+
+  static const String firstCard = 'assets/mask/mask_firstIndex.png';
+  static const String lastCard = 'assets/mask/mask_lastIndex.png';
+  static const String centerCard = 'assets/mask/mask.png';
+  static const String ovalmask = 'assets/mask/mask_cast.png';
+
+
 }
