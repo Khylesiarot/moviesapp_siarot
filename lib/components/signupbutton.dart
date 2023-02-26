@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gradient_borders/box_borders/gradient_box_border.dart';
 
-import '../Screens/homescreen.dart';
 import '../constants.dart';
  
 class SignUpButton extends StatelessWidget {
@@ -49,11 +48,7 @@ class SignUpButton extends StatelessWidget {
                               ),
                               child: MaterialButton(
                                 onPressed: () {
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) =>
-                                              const HomeScreen()));
+                                   Navigator.pushNamed(context, "home");
                                 },
                                 child: const Text(
                                   'Sign up',

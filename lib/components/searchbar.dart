@@ -43,7 +43,7 @@ class SearchFieldWidget extends StatelessWidget {
                   isDense: true,
                   hintStyle: TextStyle(
                     color: Constants.wht.withOpacity(0.6),
-                    fontSize: 17,
+                    fontSize: 16,
                     letterSpacing: -0.41,
                   ),
                 ),
